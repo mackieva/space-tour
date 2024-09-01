@@ -51,7 +51,10 @@ export default function CrewPage() {
 			</div>
 			<div className='overflow-y-visible -mt-20'>
 				{content.map((c) => (
-					<div className='mx-w-screen-lg mx-auto grid grid-cols-2 relative z-20'>
+					<div
+						key={c.name}
+						className='mx-w-screen-lg mx-auto grid grid-cols-2 relative z-20'
+					>
 						<div className='flex flex-col justify-center items-start'>
 							<h4>{c.role}</h4>
 							<h3>{c.name}</h3>

@@ -51,7 +51,10 @@ export default function DestinationPage() {
 			</div>
 			<div className='overflow-hidden'>
 				{content.map((c) => (
-					<div className='mx-w-screen-lg mx-auto grid grid-cols-2 relative z-20'>
+					<div
+						key={c.name}
+						className='mx-w-screen-lg mx-auto grid grid-cols-2 relative z-20'
+					>
 						<div className='flex justify-center items-center'>
 							<Image
 								src={c.images.webp}
