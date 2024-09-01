@@ -1,11 +1,14 @@
+'use client';
 import Image from 'next/image';
 import bgDesktop from '/public/assets/technology/background-technology-desktop.jpg';
 import bgTablet from '/public/assets/technology/background-technology-tablet.jpg';
 import bgMobile from '/public/assets/technology/background-technology-mobile.jpg';
 import { data } from '@/util/data';
+import { useState } from 'react';
 
 export default function TechnologyPage() {
 	const content = data.technology;
+	const [tab, setTab] = useState(0);
 	return (
 		<main className='h-screen w-full p-24 absolute top-0 left-0'>
 			<Image
@@ -50,26 +53,41 @@ export default function TechnologyPage() {
 				</h5>
 			</div>
 			<div className='overflow-y-visible -mt-20'>
-				{content.map((c) => (
-					<div
-						key={c.name}
-						className='mx-w-screen-lg mx-auto grid grid-cols-2 relative z-20'
-					>
-						<div className='flex flex-col justify-center items-start'>
-							<p className='secondaryTwo'>The Terminology...</p>
-							<h3>{c.name}</h3>
-							<p className='text-lavender'>{c.description}</p>
-						</div>
-						<div className='flex justify-center items-center'>
+				<div className='mx-w-screen-lg mx-auto grid grid-cols-3 relative z-20'>
+					<div className='flex flex-col gap-1'>
+						{content.map((c, i) => (
+							<button
+								key={i}
+								onClick={() => setTab(i)}
+								className='p-2 bg-slate-500 rounded-full'
+							></button>
+						))}
+					</div>
+					<div className='flex flex-col justify-center items-start'>
+						{content.map((c, i) => (
+							<div
+								key={i}
+								className={`destinationContent ${tab === i ? 'show' : ''}`}
+							>
+								<p className='secondaryTwo'>The Terminology...</p>
+								<h3>{c.name}</h3>
+								<p className='text-lavender'>{c.description}</p>
+							</div>
+						))}
+					</div>
+					<div className='flex justify-center items-center'>
+						{content.map((c, i) => (
 							<Image
+								key={i}
 								src={c.images.portrait}
 								width={445}
 								height={445}
 								alt={`Satellite Image of ${c.name}`}
+								className={`destinationContent ${tab === i ? 'show' : ''}`}
 							/>
-						</div>
+						))}
 					</div>
-				))}
+				</div>
 			</div>
 		</main>
 	);

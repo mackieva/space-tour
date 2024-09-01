@@ -1,11 +1,15 @@
+'use client';
+
 import Image from 'next/image';
 import bgDesktop from '/public/assets/crew/background-crew-desktop.jpg';
 import bgTablet from '/public/assets/crew/background-crew-tablet.jpg';
 import bgMobile from '/public/assets/crew/background-crew-mobile.jpg';
 import { data } from '@/util/data';
+import { useState } from 'react';
 
 export default function CrewPage() {
 	const content = data.crew;
+	const [tab, setTab] = useState(0);
 	return (
 		<main className='h-screen w-full p-24 absolute top-0 left-0'>
 			<Image
@@ -50,26 +54,44 @@ export default function CrewPage() {
 				</h5>
 			</div>
 			<div className='overflow-y-visible -mt-20'>
-				{content.map((c) => (
-					<div
-						key={c.name}
-						className='mx-w-screen-lg mx-auto grid grid-cols-2 relative z-20'
-					>
-						<div className='flex flex-col justify-center items-start'>
-							<h4>{c.role}</h4>
-							<h3>{c.name}</h3>
-							<p className='text-lavender'>{c.bio}</p>
-						</div>
-						<div className='flex justify-center items-center'>
-							<Image
-								src={c.images.webp}
-								width={445}
-								height={445}
-								alt={`Satellite Image of ${c.name}`}
-							/>
-						</div>
+				<div className='mx-w-screen-lg mx-auto grid grid-cols-2 relative z-20'>
+					<div className='flex flex-col justify-center items-start'>
+						{content.map((c, i) => (
+							<div
+								key={c.name}
+								className={`destinationContent ${tab === i && 'show'}`}
+							>
+								<h4>{c.role}</h4>
+								<h3>{c.name}</h3>
+								<p className='text-lavender'>{c.bio}</p>
+							</div>
+						))}
+						{content.map((c, i) => (
+							<button
+								key={i}
+								onClick={() => setTab(i)}
+								className='p-2 bg-slate-500 rounded-full'
+							></button>
+						))}
 					</div>
-				))}
+					<div className='flex justify-center items-center'>
+						{content.map((c, i) => (
+							<div
+								key={c.name}
+								id={c.name}
+								className={`destinationContent ${tab === i ? 'show' : ''}`}
+							>
+								<Image
+									key={c.name}
+									src={c.images.webp}
+									width={445}
+									height={445}
+									alt={`Satellite Image of ${c.name}`}
+								/>
+							</div>
+						))}
+					</div>
+				</div>
 			</div>
 		</main>
 	);
