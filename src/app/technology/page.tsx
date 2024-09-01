@@ -5,6 +5,7 @@ import bgTablet from '/public/assets/technology/background-technology-tablet.jpg
 import bgMobile from '/public/assets/technology/background-technology-mobile.jpg';
 import { data } from '@/util/data';
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 
 export default function TechnologyPage() {
 	const content = data.technology;
@@ -66,28 +67,50 @@ export default function TechnologyPage() {
 						))}
 					</div>
 					<div className='flex flex-col justify-center items-start'>
-						{content.map((c, i) => (
-							<div
-								key={i}
-								className={`destinationContent ${tab === i ? 'show' : ''}`}
-							>
-								<p className='secondaryTwo'>The Terminology...</p>
-								<h3>{c.name}</h3>
-								<p className='text-lavender'>{c.description}</p>
-							</div>
-						))}
+						{content.map(
+							(c, i) =>
+								tab === i && (
+									<motion.div
+										key={i}
+										layout={true}
+										initial={{ y: 10, opacity: 0 }}
+										animate={{ y: 0, opacity: 1 }}
+										exit={{ y: -10, opacity: 0 }}
+										transition={{
+											ease: 'easeOut',
+											duration: 0.6,
+										}}
+									>
+										<p className='secondaryTwo'>The Terminology...</p>
+										<h3>{c.name}</h3>
+										<p className='text-lavender'>{c.description}</p>
+									</motion.div>
+								)
+						)}
 					</div>
 					<div className='flex justify-center items-center'>
-						{content.map((c, i) => (
-							<Image
-								key={i}
-								src={c.images.portrait}
-								width={445}
-								height={445}
-								alt={`Satellite Image of ${c.name}`}
-								className={`destinationContent ${tab === i ? 'show' : ''}`}
-							/>
-						))}
+						{content.map(
+							(c, i) =>
+								tab === i && (
+									<motion.div
+										initial={{ y: 10, opacity: 0 }}
+										animate={{ y: 0, opacity: 1 }}
+										exit={{ y: -10, opacity: 0 }}
+										transition={{
+											ease: 'easeOut',
+											duration: 0.6,
+										}}
+									>
+										<Image
+											key={i}
+											src={c.images.portrait}
+											width={445}
+											height={445}
+											alt={`Satellite Image of ${c.name}`}
+										/>
+									</motion.div>
+								)
+						)}
 					</div>
 				</div>
 			</div>

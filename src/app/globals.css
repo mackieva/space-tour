@@ -43,16 +43,3 @@ h5 {
 .logoBorder {
 	@apply bg-slate-400 w-0 h-[1px] mr-[-100px] relative z-[50];
 }
-
-/*** DESTINATIONS ****/
-
-.destinationContent {
-	display: none;
-	opacity: 0;
-	transition: all 0.3s ease;
-}
-
-.destinationContent.show {
-	display: block;
-	opacity: 1;
-}
