@@ -1,11 +1,22 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Bellefair, Barlow_Condensed } from 'next/font/google';
 import './globals.css';
+import Header from '@/components/ui/Header';
 
-const inter = Inter({ subsets: ['latin'] });
+const bellefair = Bellefair({
+	subsets: ['latin'],
+	weight: '400',
+	variable: '--font-belle',
+});
+
+const barlow = Barlow_Condensed({
+	subsets: ['latin'],
+	weight: '400',
+	variable: '--font-barlow',
+});
 
 export const metadata: Metadata = {
-	title: 'Space Tourisdm',
+	title: 'Space Tourism',
 	description:
 		'Space tourism site with Next.js, Tailwind and Framer Motion / GSAP',
 };
@@ -17,7 +28,10 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			<body className={inter.className}>{children}</body>
+			<body className={`${bellefair.variable} ${barlow.variable}`}>
+				<Header />
+				{children}
+			</body>
 		</html>
 	);
 }
