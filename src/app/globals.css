@@ -35,7 +35,7 @@ h5 {
 }
 
 .subheadingTwo {
-	@apply font-sans text-white text-[16px] tracking-[2.75px] uppercase;
+	@apply font-sans text-[16px] tracking-[2.75px] uppercase;
 }
 
 /* HEADER */

@@ -54,13 +54,15 @@ export default function TechnologyPage() {
 			</div>
 			<div className='overflow-y-visible -mt-20'>
 				<div className='mx-w-screen-lg mx-auto grid grid-cols-3 relative z-20'>
-					<div className='flex flex-col gap-1'>
+					<div className='flex flex-col justify-between items-center gap-[53px]'>
 						{content.map((c, i) => (
 							<button
 								key={i}
 								onClick={() => setTab(i)}
-								className='p-2 bg-slate-500 rounded-full'
-							></button>
+								className='font-serif text-[32px] border border-slate-400 rounded-full px-[35px] py-[20px] w-auto transition-all hover:bg-white hover:text-blue hover:border-white'
+							>
+								{i + 1}
+							</button>
 						))}
 					</div>
 					<div className='flex flex-col justify-center items-start'>

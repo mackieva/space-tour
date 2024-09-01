@@ -66,13 +66,17 @@ export default function CrewPage() {
 								<p className='text-lavender'>{c.bio}</p>
 							</div>
 						))}
-						{content.map((c, i) => (
-							<button
-								key={i}
-								onClick={() => setTab(i)}
-								className='p-2 bg-slate-500 rounded-full'
-							></button>
-						))}
+						<div className='flex gap-6'>
+							{content.map((c, i) => (
+								<button
+									key={i}
+									onClick={() => setTab(i)}
+									className={`h-4 w-4 bg-slate-500 rounded-full ${
+										tab === i ? 'selected' : ''
+									}`}
+								></button>
+							))}
+						</div>
 					</div>
 					<div className='flex justify-center items-center'>
 						{content.map((c, i) => (

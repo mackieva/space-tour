@@ -76,8 +76,12 @@ export default function DestinationPage() {
 								<button
 									key={i}
 									onClick={() => setTab(i)}
-									className='p-2 bg-slate-500 rounded-full'
-								></button>
+									className={`text-lavender uppercase pr-8 ${
+										tab === i && 'selected'
+									}`}
+								>
+									{c.name}
+								</button>
 							))}
 						</div>
 						{content.map((c, i) => (
