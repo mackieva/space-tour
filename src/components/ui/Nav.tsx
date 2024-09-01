@@ -21,7 +21,7 @@ export default function Nav() {
 					key={i}
 					onMouseEnter={() => setHoveredLink(link.label)}
 				>
-					<span className='pr-3 font-bold'>0{i + 1}</span>
+					<span className='pr-3 font-bold'>0{i}</span>
 					{link.label}
 					{hoveredLink === link.label && (
 						<motion.div

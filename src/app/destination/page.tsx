@@ -42,10 +42,10 @@ export default function DestinationPage() {
 				}}
 				className='md:hidden'
 			/>
-			<div className='mx-w-screen-lg mx-auto flex flex-col items-center relative z-50'>
-				<h1 className='text-6xl font-bold font-mono text-cream'>
-					Location Reached: Destination
-				</h1>
+			<div className='mx-w-screen-lg mx-auto mt-40 grid grid-cols-2 relative z-50'>
+				<div className='flex flex-col items-start justify-between '>
+					<h1>Destination</h1>
+				</div>
 			</div>
 		</main>
 	);

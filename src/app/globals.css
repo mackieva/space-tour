@@ -7,7 +7,7 @@ body {
 }
 
 p {
-	@apply leading-9;
+	@apply leading-9 text-lg;
 }
 
 h1 {
