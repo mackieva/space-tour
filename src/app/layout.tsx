@@ -28,7 +28,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			<body className={`${bellefair.variable} ${barlow.variable}`}>
+			<body className={`${bellefair.variable} ${barlow.variable} antialiased`}>
 				<Header />
 				{children}
 			</body>

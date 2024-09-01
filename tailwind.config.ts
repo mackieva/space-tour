@@ -8,6 +8,10 @@ const config: Config = {
 	],
 	theme: {
 		extend: {
+			gridTemplateColumns: {
+				// Complex site-specific column configuration
+				header: '1fr 57%',
+			},
 			screens: {
 				lg: '1440px',
 			},
@@ -17,8 +21,8 @@ const config: Config = {
 				cream: 'hsl(0,0%,100%)',
 			},
 			fontFamily: {
-				sans: ['var(--font-belle)'],
-				mono: ['var(--font-barlow)'],
+				serif: ['var(--font-belle)'],
+				sans: ['var(--font-barlow)'],
 			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

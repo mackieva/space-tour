@@ -42,10 +42,17 @@ export default function Home() {
 				}}
 				className='md:hidden'
 			/>
-			<div className='mx-w-screen-lg mx-auto flex flex-col items-center relative z-50'>
-				<h1 className='text-6xl font-bold font-mono text-cream'>
-					Hello, let's go to space!
-				</h1>
+			<div className='mx-w-screen-lg mx-auto mt-40 grid grid-cols-2 relative z-50'>
+				<div className='flex flex-col items-start justify-between '>
+					<h5>So, you want to travel to</h5>
+					<h1>Space</h1>
+					<p>
+						Let’s face it; if you want to go to space, you might as well
+						genuinely go to outer space and not hover kind of on the edge of it.
+						Well sit back, and relax because we’ll give you a truly out of this
+						world experience!
+					</p>
+				</div>
 			</div>
 		</main>
 	);
