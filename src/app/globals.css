@@ -30,6 +30,14 @@ h5 {
 	@apply font-sans text-lavender text-[28px] tracking-[4.75px] uppercase;
 }
 
+.subheadingOne {
+	@apply font-serif text-white text-[28px] uppercase;
+}
+
+.subheadingTwo {
+	@apply font-sans text-white text-[16px] tracking-[2.75px] uppercase;
+}
+
 /* HEADER */
 
 .logoBorder {
