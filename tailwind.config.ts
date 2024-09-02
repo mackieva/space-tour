@@ -11,6 +11,7 @@ const config: Config = {
 			gridTemplateColumns: {
 				// Complex site-specific column configuration
 				header: '1fr 57%',
+				headerTablet: '1fr 59%',
 				homeGrid: '40% 1fr',
 				destinationGrid: '1fr 40%',
 				techGrid: '1fr 35% 40%',
