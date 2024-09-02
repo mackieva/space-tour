@@ -12,6 +12,7 @@ const config: Config = {
 				// Complex site-specific column configuration
 				header: '1fr 57%',
 				headerTablet: '1fr 59%',
+				headerMobile: 'repeat(2, 1fr)',
 				homeGrid: '40% 1fr',
 				destinationGrid: '1fr 40%',
 				techGrid: '1fr 35% 40%',
