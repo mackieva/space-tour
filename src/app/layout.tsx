@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Bellefair, Barlow_Condensed } from 'next/font/google';
+import { Bellefair, Barlow, Barlow_Condensed } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/ui/Header';
 
@@ -9,10 +9,16 @@ const bellefair = Bellefair({
 	variable: '--font-belle',
 });
 
-const barlow = Barlow_Condensed({
+const barlow = Barlow({
+	subsets: ['latin'],
+	weight: ['400', '600'],
+	variable: '--font-barlow',
+});
+
+const barlow_condensed = Barlow_Condensed({
 	subsets: ['latin'],
 	weight: '400',
-	variable: '--font-barlow',
+	variable: '--font-barlow-con',
 });
 
 export const metadata: Metadata = {
@@ -28,7 +34,9 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			<body className={`${bellefair.variable} ${barlow.variable} antialiased`}>
+			<body
+				className={`${bellefair.variable} ${barlow_condensed.variable} ${barlow.variable} antialiased`}
+			>
 				<Header />
 				{children}
 			</body>

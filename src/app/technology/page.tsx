@@ -11,7 +11,7 @@ export default function TechnologyPage() {
 	const content = data.technology;
 	const [tab, setTab] = useState(0);
 	return (
-		<main className='h-screen w-full p-24 absolute top-0 left-0'>
+		<main className='h-screen w-full absolute top-0 left-0'>
 			<Image
 				src={bgDesktop}
 				alt='Planet Earth in Space'

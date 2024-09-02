@@ -12,6 +12,7 @@ const config: Config = {
 				// Complex site-specific column configuration
 				header: '1fr 57%',
 				homeGrid: '40% 1fr',
+				destinationGrid: 'repeat(2, 445px)',
 			},
 			screens: {
 				lg: '1440px',
@@ -24,6 +25,7 @@ const config: Config = {
 			fontFamily: {
 				serif: ['var(--font-belle)'],
 				sans: ['var(--font-barlow)'],
+				sansCon: ['var(--font-barlow-con)'],
 			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

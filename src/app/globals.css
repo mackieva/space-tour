@@ -7,7 +7,7 @@ body {
 }
 
 p {
-	@apply leading-9 text-lg;
+	@apply font-sans leading-9 text-lg;
 }
 
 h1 {
@@ -27,7 +27,7 @@ h4 {
 }
 
 h5 {
-	@apply font-sans text-lavender text-[28px] tracking-[4.75px] uppercase;
+	@apply font-sansCon text-lavender text-[28px] tracking-[4.75px] uppercase;
 }
 
 .subheadingOne {
