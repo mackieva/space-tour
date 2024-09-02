@@ -8,7 +8,7 @@ import Link from 'next/link';
 
 export default function Header() {
 	return (
-		<header className='max-w-screen-lg mx-auto grid grid-cols-header mt-10 relative z-50'>
+		<header className='max-w-screen-lg mx-auto grid grid-cols-headerTablet relative z-50 lg:grid-cols-header lg:mt-10'>
 			<div className='ml-12 flex justify-start gap-3 items-center'>
 				<Link href='/'>
 					<Image src={logo} alt="Space Tourism Logo - Let's Go" />

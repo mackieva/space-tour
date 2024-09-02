@@ -11,17 +11,17 @@ export default function Nav() {
 
 	return (
 		<nav
-			className='flex justify-center items-center gap-[52px] bg-white/[0.04] backdrop-blur-md'
+			className='flex justify-center items-center bg-white/[0.04] backdrop-blur-md gap-[35px] lg:gap-[52px]'
 			onMouseLeave={() => setHoveredLink('')}
 		>
 			{navList.map((link, i) => (
 				<Link
-					className='font-sans text-white tracking-[2.7px] pt-10 pb-10 uppercase relative'
+					className='font-sansCon text-white tracking-[2.7px] pt-10 pb-10 uppercase relative md:text-sm lg:text-base'
 					href={link.path}
 					key={i}
 					onMouseEnter={() => setHoveredLink(link.label)}
 				>
-					<span className='pr-3 font-bold'>0{i}</span>
+					<span className='pr-3 font-bold hidden lg:inline'>0{i}</span>
 					{link.label}
 					{hoveredLink === link.label && (
 						<motion.div
