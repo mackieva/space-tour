@@ -49,7 +49,7 @@ export default function CrewPage() {
 				}}
 				className='md:hidden'
 			/>
-			<div className='pt-24 px-24 max-w-screen-lg mx-auto flex flex-col'>
+			<div className='pt-24 px-24 max-w-screen-lg mx-auto flex flex-col h-full'>
 				<div className='mt-[75px] flex justify-start items-center relative z-20'>
 					<h5 className='text-white'>
 						<span className='opacity-25 font-bold'>02</span> Meet Your Crew
@@ -62,9 +62,9 @@ export default function CrewPage() {
 								tab === i && (
 									<motion.div
 										key={c.name}
-										initial={{ y: 10, opacity: 0 }}
-										animate={{ y: 0, opacity: 1 }}
-										exit={{ y: -10, opacity: 0 }}
+										initial={{ x: 10, opacity: 0 }}
+										animate={{ x: 0, opacity: 1 }}
+										exit={{ x: -10, opacity: 0 }}
 										transition={{ ease: 'easeOut', duration: 0.6 }}
 									>
 										<h4>{c.role}</h4>
@@ -85,7 +85,7 @@ export default function CrewPage() {
 							))}
 						</div>
 					</div>
-					<div className='flex justify-center items-center'>
+					<div className='flex justify-end items-end relative overflow-hidden'>
 						{content.map(
 							(c, i) =>
 								tab === i && (
@@ -95,14 +95,13 @@ export default function CrewPage() {
 										animate={{ y: 0, opacity: 1 }}
 										exit={{ y: -10, opacity: 0 }}
 										transition={{ ease: 'easeOut', duration: 0.6 }}
-										className='z-30 relative'
+										className='z-30 relative w-full h-full'
 									>
 										<Image
 											key={c.name}
 											src={c.images.png}
-											width={c.images.width}
-											height={c.images.height}
-											alt={`Satellite Image of ${c.name}`}
+											fill
+											alt={`Headshot of ${c.name}`}
 											style={{
 												objectFit: 'contain',
 											}}
