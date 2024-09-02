@@ -78,14 +78,14 @@ export default function CrewPage() {
 								<button
 									key={i}
 									onClick={() => setTab(i)}
-									className={`h-4 w-4 bg-slate-500 rounded-full ${
+									className={`h-4 w-4 bg-slate-500 rounded-full transition hover:bg-white ${
 										tab === i ? 'selected' : ''
 									}`}
 								></button>
 							))}
 						</div>
 					</div>
-					<div className='flex justify-center items-center relative'>
+					<div className='flex justify-center items-center'>
 						{content.map(
 							(c, i) =>
 								tab === i && (
@@ -95,14 +95,17 @@ export default function CrewPage() {
 										animate={{ y: 0, opacity: 1 }}
 										exit={{ y: -10, opacity: 0 }}
 										transition={{ ease: 'easeOut', duration: 0.6 }}
-										className='z-30'
+										className='z-30 relative'
 									>
 										<Image
 											key={c.name}
-											src={c.images.webp}
+											src={c.images.png}
 											width={c.images.width}
 											height={c.images.height}
 											alt={`Satellite Image of ${c.name}`}
+											style={{
+												objectFit: 'contain',
+											}}
 										/>
 									</motion.div>
 								)

@@ -56,7 +56,7 @@ export default function DestinationPage() {
 					</h5>
 				</div>
 			</div>
-			<div className='mt-12 px-24 max-w-screen-lg mx-auto grid grid-cols-destinationGrid gap-[165px] relative z-20'>
+			<div className='mt-12 px-24 max-w-screen-lg mx-auto grid grid-cols-destinationGrid justify-between relative z-20'>
 				<div className='flex justify-center items-center'>
 					{content.map(
 						(c, i) =>

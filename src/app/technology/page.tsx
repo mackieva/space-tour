@@ -48,71 +48,71 @@ export default function TechnologyPage() {
 				}}
 				className='md:hidden'
 			/>
-			<div className='mx-w-screen-lg mx-auto mt-[75px] mb-16 flex justify-start items-center relative z-20'>
-				<h5 className='text-white'>
-					<span className='opacity-25 font-bold'>03</span> Space Launch 101
-				</h5>
+			<div className='pt-24 px-24 max-w-screen-lg mx-auto flex flex-col'>
+				<div className='mt-[75px] flex justify-start items-center relative z-20'>
+					<h5 className='text-white'>
+						<span className='opacity-25 font-bold'>03</span> Space Launch 101
+					</h5>
+				</div>
 			</div>
-			<div className='overflow-y-visible -mt-20'>
-				<div className='mx-w-screen-lg mx-auto grid grid-cols-3 relative z-20'>
-					<div className='flex flex-col justify-between items-center gap-[53px]'>
-						{content.map((c, i) => (
-							<button
-								key={i}
-								onClick={() => setTab(i)}
-								className='font-serif text-[32px] border border-slate-400 rounded-full px-[35px] py-[20px] w-auto transition-all hover:bg-white hover:text-blue hover:border-white'
-							>
-								{i + 1}
-							</button>
-						))}
-					</div>
-					<div className='flex flex-col justify-center items-start'>
-						{content.map(
-							(c, i) =>
-								tab === i && (
-									<motion.div
+			<div className='mt-12 ml-40 grid grid-cols-techGrid justify-between relative z-20'>
+				<div className='flex flex-col justify-center items-center gap-[53px]'>
+					{content.map((c, i) => (
+						<button
+							key={i}
+							onClick={() => setTab(i)}
+							className='font-serif text-[32px] border border-slate-400 rounded-full px-[35px] py-[20px] w-auto transition-all hover:bg-white hover:text-blue hover:border-white'
+						>
+							{i + 1}
+						</button>
+					))}
+				</div>
+				<div className='flex flex-col justify-center items-start'>
+					{content.map(
+						(c, i) =>
+							tab === i && (
+								<motion.div
+									key={i}
+									layout={true}
+									initial={{ y: 10, opacity: 0 }}
+									animate={{ y: 0, opacity: 1 }}
+									exit={{ y: -10, opacity: 0 }}
+									transition={{
+										ease: 'easeOut',
+										duration: 0.6,
+									}}
+								>
+									<p className='secondaryTwo'>The Terminology...</p>
+									<h3>{c.name}</h3>
+									<p className='text-lavender'>{c.description}</p>
+								</motion.div>
+							)
+					)}
+				</div>
+				<div className='flex justify-end items-center'>
+					{content.map(
+						(c, i) =>
+							tab === i && (
+								<motion.div
+									key={i}
+									initial={{ y: 10, opacity: 0 }}
+									animate={{ y: 0, opacity: 1 }}
+									exit={{ y: -10, opacity: 0 }}
+									transition={{
+										ease: 'easeOut',
+										duration: 0.6,
+									}}
+								>
+									<Image
 										key={i}
-										layout={true}
-										initial={{ y: 10, opacity: 0 }}
-										animate={{ y: 0, opacity: 1 }}
-										exit={{ y: -10, opacity: 0 }}
-										transition={{
-											ease: 'easeOut',
-											duration: 0.6,
-										}}
-									>
-										<p className='secondaryTwo'>The Terminology...</p>
-										<h3>{c.name}</h3>
-										<p className='text-lavender'>{c.description}</p>
-									</motion.div>
-								)
-						)}
-					</div>
-					<div className='flex justify-center items-center'>
-						{content.map(
-							(c, i) =>
-								tab === i && (
-									<motion.div
-										key={i}
-										initial={{ y: 10, opacity: 0 }}
-										animate={{ y: 0, opacity: 1 }}
-										exit={{ y: -10, opacity: 0 }}
-										transition={{
-											ease: 'easeOut',
-											duration: 0.6,
-										}}
-									>
-										<Image
-											key={i}
-											src={c.images.portrait}
-											width={445}
-											height={445}
-											alt={`Satellite Image of ${c.name}`}
-										/>
-									</motion.div>
-								)
-						)}
-					</div>
+										src={c.images.portrait}
+										width={445}
+										height={445}
+										alt={`Satellite Image of ${c.name}`}
+									/>
+								</motion.div>
+							)
+					)}
 				</div>
 			</div>
 		</main>
