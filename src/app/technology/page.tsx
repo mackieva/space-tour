@@ -93,6 +93,7 @@ export default function TechnologyPage() {
 							(c, i) =>
 								tab === i && (
 									<motion.div
+										key={i}
 										initial={{ y: 10, opacity: 0 }}
 										animate={{ y: 0, opacity: 1 }}
 										exit={{ y: -10, opacity: 0 }}
