@@ -10,6 +10,7 @@ import { useState } from 'react';
 export default function DestinationPage() {
 	const content = data.destinations;
 	const [tab, setTab] = useState(0);
+	const [hoveredLink, setHoveredLink] = useState('Moon');
 	return (
 		<main className='h-screen w-full absolute top-0 left-0'>
 			<Image
@@ -80,16 +81,24 @@ export default function DestinationPage() {
 					)}
 				</div>
 				<div className='flex flex-col justify-center items-start'>
-					<div className='flex gap-1'>
+					<div className='flex gap-5'>
 						{content.map((c, i) => (
 							<button
 								key={i}
 								onClick={() => setTab(i)}
-								className={`text-lavender uppercase pr-8 ${
+								onMouseEnter={() => setHoveredLink(c.name)}
+								className={`text-lavender uppercase pb-1 relative ${
 									tab === i && 'selected'
 								}`}
 							>
 								{c.name}
+								{hoveredLink === c.name && (
+									<motion.div
+										layout={true}
+										layoutId='tab-hovered-backdrop'
+										className='animatedBorder'
+									/>
+								)}
 							</button>
 						))}
 					</div>

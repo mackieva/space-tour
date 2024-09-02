@@ -74,9 +74,9 @@ export default function TechnologyPage() {
 								<motion.div
 									key={i}
 									layout={true}
-									initial={{ y: 10, opacity: 0 }}
-									animate={{ y: 0, opacity: 1 }}
-									exit={{ y: -10, opacity: 0 }}
+									initial={{ x: 10, opacity: 0 }}
+									animate={{ x: 0, opacity: 1 }}
+									exit={{ x: -10, opacity: 0 }}
 									transition={{
 										ease: 'easeOut',
 										duration: 0.6,
@@ -89,15 +89,15 @@ export default function TechnologyPage() {
 							)
 					)}
 				</div>
-				<div className='flex justify-end items-center'>
+				<div className='flex justify-end items-center overflow-hidden'>
 					{content.map(
 						(c, i) =>
 							tab === i && (
 								<motion.div
 									key={i}
-									initial={{ y: 10, opacity: 0 }}
-									animate={{ y: 0, opacity: 1 }}
-									exit={{ y: -10, opacity: 0 }}
+									initial={{ x: 20, opacity: 0 }}
+									animate={{ x: 0, opacity: 1 }}
+									exit={{ x: -20, opacity: 0 }}
 									transition={{
 										ease: 'easeOut',
 										duration: 0.6,

@@ -43,3 +43,12 @@ h5 {
 .logoBorder {
 	@apply bg-slate-400 w-0 h-[1px] mr-[-100px] relative z-[50];
 }
+
+.animatedBorder {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 3px;
+	width: 100%;
+	background: #fff;
+}
