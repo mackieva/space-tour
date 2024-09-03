@@ -57,8 +57,8 @@ export default function DestinationPage() {
 					</h5>
 				</div>
 			</div>
-			<div className='mt-12 px-24 max-w-screen-lg mx-auto grid grid-cols-destinationGrid justify-between relative z-20'>
-				<div className='flex justify-center items-center'>
+			<div className='mt-12 px-24 max-w-screen-lg mx-auto md:flex md:flex-col lg:grid lg:grid-cols-destinationGrid justify-between relative z-20'>
+				<div className='flex justify-center items-center md:mb-[53px] lg:mb-0'>
 					{content.map(
 						(c, i) =>
 							tab === i && (
@@ -75,19 +75,20 @@ export default function DestinationPage() {
 										width={445}
 										height={445}
 										alt={`Satellite Image of ${c.name}`}
+										className='md:max-w-[300px] lg:max-w-[450px]'
 									/>
 								</motion.div>
 							)
 					)}
 				</div>
-				<div className='flex flex-col justify-center items-start'>
+				<div className='flex flex-col justify-center md:items-center md:text-center  lg:text-left lg:items-start'>
 					<div className='flex gap-5'>
 						{content.map((c, i) => (
 							<button
 								key={i}
 								onClick={() => setTab(i)}
 								onMouseEnter={() => setHoveredLink(c.name)}
-								className={`text-lavender uppercase pb-1 relative ${
+								className={`subheadingTwo text-lavender uppercase pb-1 relative ${
 									tab === i && 'selected'
 								}`}
 							>
@@ -116,8 +117,10 @@ export default function DestinationPage() {
 									}}
 								>
 									<h2>{c.name}</h2>
-									<p className='text-lavender text-lg'>{c.description}</p>
-									<div className='grid grid-cols-2 w-full mt-[54px] pt-[28px] border-t border-color border-slate-300'>
+									<p className='text-lavender text-lg text-balance'>
+										{c.description}
+									</p>
+									<div className='grid grid-cols-2 w-full mt-[54px] pt-[28px] border-t border-color borderDark'>
 										<div>
 											<p className='subheadingTwo text-lavender'>
 												Avg. Distance

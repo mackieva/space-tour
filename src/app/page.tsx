@@ -43,20 +43,20 @@ export default function Home() {
 				}}
 				className='md:hidden'
 			/>
-			<div className='mx-w-screen-lg h-[85vh] mx-auto px-[165px] grid grid-cols-2 relative z-20'>
-				<div className='flex flex-col items-start justify-end'>
-					<h5>So, you want to travel to</h5>
+			<div className='flex flex-col mx-w-screen-lg mx-auto pt-[200px] px-[160px] h-full relative z-20 lg:h-[85vh] lg:px-[165px] lg:grid lg:grid-cols-2'>
+				<div className='flex flex-col justify-start	 items-center lg:justify-center lg:items-start'>
+					<h5 className='text-xl lg:text-[28px]'>So, you want to travel to</h5>
 					<h1>Space</h1>
-					<p className='text-lavender'>
+					<p className='text-lavender text-center lg:text-left'>
 						Let’s face it; if you want to go to space, you might as well
 						genuinely go to outer space and not hover kind of on the edge of it.
 						Well sit back, and relax because we’ll give you a truly out of this
 						world experience!
 					</p>
 				</div>
-				<div className='flex justify-end items-end'>
+				<div className='flex flex-col justify-center items-center mt-auto mb-[90px] lg:justify-end lg:items-end'>
 					<Link
-						className='px-[65px] py-[110px] rounded-full bg-white font-serif text-[32px] text-black uppercase'
+						className='rounded-full bg-white font-serif text-[32px] text-black px-[45px] py-[85px] uppercase lg:px-[65px] lg:py-[110px]'
 						href='/destination'
 					>
 						Explore

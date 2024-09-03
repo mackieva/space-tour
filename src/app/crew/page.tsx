@@ -49,14 +49,14 @@ export default function CrewPage() {
 				}}
 				className='md:hidden'
 			/>
-			<div className='pt-24 px-24 max-w-screen-lg mx-auto flex flex-col h-full'>
+			<div className='pt-12 px-12 lg:pt-24 lg:px-24 max-w-screen-lg mx-auto flex flex-col h-full'>
 				<div className='mt-[75px] flex justify-start items-center relative z-20'>
 					<h5 className='text-white'>
 						<span className='opacity-25 font-bold'>02</span> Meet Your Crew
 					</h5>
 				</div>
-				<div className='-mt-8 flex-1 grid grid-cols-2 justify-stretch relative z-20'>
-					<div className='flex flex-col justify-center items-start'>
+				<div className='flex-1 flex flex-col lg:grid lg:grid-cols-2 justify-stretch relative z-20 lg:-mt-8'>
+					<div className='max-w-2/3 flex flex-col justify-center items-center lg:gap-32 lg:items-start'>
 						{content.map(
 							(c, i) =>
 								tab === i && (

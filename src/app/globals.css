@@ -11,31 +11,31 @@ p {
 }
 
 h1 {
-	@apply font-serif text-white text-[150px] uppercase;
+	@apply font-serif text-white text-[150px] uppercase leading-normal;
 }
 
 h2 {
-	@apply font-serif text-white text-[100px] uppercase;
+	@apply font-serif text-white text-[100px] uppercase leading-normal;
 }
 
 h3 {
-	@apply font-serif text-white text-[56px] uppercase;
+	@apply font-serif text-white text-[56px] uppercase leading-normal;
 }
 
 h4 {
-	@apply font-serif text-white text-[32px] uppercase;
+	@apply font-serif text-white text-[32px] uppercase leading-normal;
 }
 
 h5 {
-	@apply font-sansCon text-lavender text-[28px] tracking-[4.75px] uppercase;
+	@apply font-sansCon text-lavender tracking-[4.75px] uppercase leading-normal;
 }
 
 .subheadingOne {
-	@apply font-serif text-white text-[28px] uppercase;
+	@apply font-serif text-white text-[28px] uppercase leading-normal;
 }
 
 .subheadingTwo {
-	@apply font-sans text-[16px] tracking-[2.75px] uppercase;
+	@apply font-sansCon text-[16px] tracking-[2.75px] uppercase leading-normal;
 }
 
 /* HEADER */
@@ -51,4 +51,8 @@ h5 {
 	height: 3px;
 	width: 100%;
 	background: #fff;
+}
+
+.borderDark {
+	border-color: #383b4b;
 }

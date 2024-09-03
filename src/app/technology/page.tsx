@@ -56,12 +56,12 @@ export default function TechnologyPage() {
 				</div>
 			</div>
 			<div className='mt-12 ml-40 grid grid-cols-techGrid justify-between relative z-20'>
-				<div className='flex flex-col justify-center items-center gap-[53px]'>
+				<div className='flex flex-col justify-center items-center gap-[32px]'>
 					{content.map((c, i) => (
 						<button
 							key={i}
 							onClick={() => setTab(i)}
-							className='font-serif text-[32px] border border-slate-400 rounded-full px-[35px] py-[20px] w-auto transition-all hover:bg-white hover:text-blue hover:border-white'
+							className='font-serif text-[32px] leading-none border border-slate-400 rounded-[50%] px-[32px] py-[24px] w-auto transition-all hover:bg-white hover:text-blue hover:border-white'
 						>
 							{i + 1}
 						</button>
