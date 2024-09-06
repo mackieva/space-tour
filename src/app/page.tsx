@@ -43,7 +43,7 @@ export default function Home() {
 				}}
 				className='md:hidden'
 			/>
-			<div className='flex flex-col mx-w-screen-lg mx-auto pt-[200px] px-[160px] h-full relative z-20 lg:h-[85vh] lg:px-[165px] lg:grid lg:grid-cols-2'>
+			<div className='flex flex-col mx-w-screen-lg mx-auto pt-[200px] px-[160px] relative z-20 md:h-full lg:h-[85vh] lg:px-[165px] lg:grid lg:grid-cols-2'>
 				<div className='flex flex-col justify-start	 items-center lg:justify-center lg:items-start'>
 					<h5 className='text-xl lg:text-[28px]'>So, you want to travel to</h5>
 					<h1>Space</h1>

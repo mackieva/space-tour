@@ -123,7 +123,7 @@ export default function TechnologyPage() {
                   width={768}
                   height={310}
                   alt={`Satellite Image of ${c.name}`}
-                  className="block w-full object-cove max-h-[310px] lg:hidden"
+                  className="block w-full object-cover max-h-[310px] lg:hidden"
                 />
                 </motion.div>
               ),
