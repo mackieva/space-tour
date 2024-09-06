@@ -49,14 +49,14 @@ export default function TechnologyPage() {
         className="md:hidden"
       />
       <div className="mx-auto flex max-w-screen-lg flex-col px-12 lg:px-24 lg:pt-24">
-        <div className="relative z-20 mb-[60px] mt-[136px] flex items-center justify-start lg:mt-[75px]">
+        <div className="relative z-20 mt-[75px] mb-[60px] flex items-center justify-start">
           <h5 className="text-xl text-white lg:text-lg">
             <span className="font-bold opacity-25">03</span> Space Launch 101
           </h5>
         </div>
       </div>
       <div className="relative z-20 flex flex-col justify-between lg:ml-40 lg:mt-12 lg:grid lg:grid-cols-techGrid">
-        <div className="order-2 flex h-full items-center justify-center gap-[32px] lg:order-1 lg:flex-col">
+        <div className="order-2 flex h-full items-center justify-center gap-[32px] pt-[56px] pb-[44px] lg:pt-0 lg:pb-0 lg:order-1 lg:flex-col">
           {content.map((c, i) => (
             <button
               key={i}
@@ -81,9 +81,9 @@ export default function TechnologyPage() {
                     ease: "easeOut",
                     duration: 0.6,
                   }}
-                  className="max-w-[458px] lg:max-w-full"
+                  className="max-w-[60%] lg:max-w-full"
                 >
-                  <p className="secondaryTwo">The Terminology...</p>
+                  <p className="secondaryTwo text-lavender font-sansCon uppercase">The Terminology...</p>
                   <h3 className="md:text-[40px] lg:text-[56px] lg:text-white">
                     {c.name}
                   </h3>
@@ -109,14 +109,22 @@ export default function TechnologyPage() {
                   }}
                   className="w-full"
                 >
-                  <Image
-                    key={i}
-                    src={c.images.portrait}
-                    width={445}
-                    height={445}
-                    alt={`Satellite Image of ${c.name}`}
-                    className="aspect-video w-full object-cover lg:aspect-auto"
-                  />
+                <Image
+                  key={i}
+                  src={c.images.portrait}
+                  width={445}
+                  height={445}
+                  alt={`Satellite Image of ${c.name}`}
+                  className="hidden w-full object-cover lg:block"
+                />
+                <Image
+                  key={i}
+                  src={c.images.landscape}
+                  width={768}
+                  height={310}
+                  alt={`Satellite Image of ${c.name}`}
+                  className="block w-full object-cover lg:hidden"
+                />
                 </motion.div>
               ),
           )}
