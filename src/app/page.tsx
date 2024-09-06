@@ -43,11 +43,11 @@ export default function Home() {
 				}}
 				className='md:hidden'
 			/>
-			<div className='px-[24px] pt-[88px] flex flex-col mx-w-screen-lg mx-auto relative z-2 md:pt-[200px] md:px-[160px] md:h-full lg:h-[85vh] lg:px-[165px] lg:grid lg:grid-cols-2'>
+			<div className='px-[24px] pt-[112px] flex flex-col mx-w-screen-lg mx-auto relative z-2 md:pt-[200px] md:px-[160px] md:h-full lg:h-[85vh] lg:px-[165px] lg:grid lg:grid-cols-2'>
 				<div className='flex flex-col justify-start items-center lg:justify-center lg:items-start'>
-					<h5 className='text-xl lg:text-[28px]'>So, you want to travel to</h5>
+					<h5 className='subheadingTwo text-xl lg:text-[28px]'>So, you want to travel to</h5>
 					<h1 className='text-[80px] md:text-[150px]'>Space</h1>
-					<p className='text-lavender text-center lg:text-left'>
+					<p className='text-lavender text-center text-[15px] mb-[81px] md:mb-0 lg:text-left'>
 						Let’s face it; if you want to go to space, you might as well
 						genuinely go to outer space and not hover kind of on the edge of it.
 						Well sit back, and relax because we’ll give you a truly out of this
