@@ -54,7 +54,7 @@ export default function Home() {
 						world experience!
 					</p>
 				</div>
-				<div className='flex flex-col justify-center items-center mt-auto mb-[90px] lg:justify-end lg:items-end'>
+				<div className='flex flex-col justify-center items-center md:mt-auto md:mb-[90px] lg:justify-end lg:items-end'>
 					<Link
 						className='rounded-full bg-white font-serif text-[32px] text-black px-[45px] py-[85px] uppercase lg:px-[65px] lg:py-[110px]'
 						href='/destination'

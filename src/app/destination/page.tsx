@@ -12,7 +12,7 @@ export default function DestinationPage() {
 	const [tab, setTab] = useState(0);
 	const [hoveredLink, setHoveredLink] = useState('Moon');
 	return (
-		<main className='h-screen w-full absolute top-0 left-0'>
+		<main className='h-full w-full absolute top-0 left-0 md:h-screen'>
 			<Image
 				src={bgDesktop}
 				alt='Planet Earth in Space'
@@ -49,7 +49,7 @@ export default function DestinationPage() {
 				}}
 				className='md:hidden'
 			/>
-			<div className='pt-24 px-24 max-w-screen-lg mx-auto flex flex-col'>
+			<div className='px-[24px] pt-24 max-w-full md:px-24 md:max-w-screen-lg md:mx-auto flex flex-col'>
 				<div className='mt-[75px] flex justify-start items-center relative z-20'>
 					<h5 className='text-white'>
 						<span className='opacity-25 font-bold'>01</span> Pick Your
@@ -57,7 +57,7 @@ export default function DestinationPage() {
 					</h5>
 				</div>
 			</div>
-			<div className='mt-12 px-24 max-w-screen-lg mx-auto md:flex md:flex-col lg:grid lg:grid-cols-destinationGrid justify-between relative z-20'>
+			<div className='mt-12 px-[24px] max-w-full md:px-24 md:flex md:flex-col md:mx-auto md:max-w-screen-lg lg:grid lg:grid-cols-destinationGrid justify-between relative z-20'>
 				<div className='flex justify-center items-center md:mb-[53px] lg:mb-0'>
 					{content.map(
 						(c, i) =>
@@ -75,7 +75,7 @@ export default function DestinationPage() {
 										width={445}
 										height={445}
 										alt={`Satellite Image of ${c.name}`}
-										className='md:max-w-[300px] lg:max-w-[450px]'
+										className='max-w-[170px] md:max-w-[300px] lg:max-w-[450px]'
 									/>
 								</motion.div>
 							)
@@ -120,7 +120,7 @@ export default function DestinationPage() {
 									<p className='text-lavender text-lg text-balance'>
 										{c.description}
 									</p>
-									<div className='grid grid-cols-2 w-full mt-[54px] pt-[28px] border-t border-color borderDark'>
+									<div className='grid grid-cols-1 md:grid-cols-2 w-full mt-[54px] pt-[28px] border-t border-color borderDark'>
 										<div>
 											<p className='subheadingTwo text-lavender'>
 												Avg. Distance
