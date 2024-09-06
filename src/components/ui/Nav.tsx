@@ -21,7 +21,7 @@ export default function Nav() {
 			</div>
 			<nav
 				className={`flex flex-col justify-start items-start bg-white/[0.04] backdrop-blur-md gap-[32px] absolute top-0 right-0 w-2/3 h-screen p-8 pb-0 transition-all duration-300 ${
-					navOpen ? 'translate-x-0' : 'translate-x-full'
+					navOpen ? 'translate-x-0' : 'translate-x-[200%]'
 				} md:justify-center md:relative md:h-auto md:w-full md:flex-row md:translate-x-0 lg:gap-[52px]`}
 				onMouseLeave={() => setHoveredLink('')}
 			>
