@@ -56,8 +56,8 @@ export default function TechnologyPage() {
                     </h5>
                 </div>
             </div>
-            <div className="relative z-20 flex flex-col justify-between lg:ml-40 lg:mt-12 lg:grid lg:grid-cols-techGrid">
-                <div className="order-2 flex h-full items-center justify-center gap-[16px] pb-[26px] pt-[35px] md:gap-[32px] md:pb-[44px] md:pt-[56px] lg:order-1 lg:flex-col lg:pb-0 lg:pt-0">
+            <div className="relative z-20 flex flex-col justify-between lg:ml-24 lg:mt-[26px] lg:grid lg:grid-cols-techGrid">
+                <div className="order-2 flex h-full items-center justify-center gap-[16px] pb-[26px] pt-[35px] md:gap-[32px] md:pb-[44px] md:pt-[56px] lg:order-1 lg:flex-col lg:items-start lg:pb-0 lg:pt-0">
                     {content.map((c, i) => (
                         <motion.button
                             key={i}

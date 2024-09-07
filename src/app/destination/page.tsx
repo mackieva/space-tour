@@ -119,13 +119,13 @@ export default function DestinationPage() {
                                         duration: 0.6,
                                     }}
                                 >
-                                    <h2 className="text-center text-[56px] md:text-left">
+                                    <h2 className="text-center text-[56px] lg:text-left">
                                         {c.name}
                                     </h2>
-                                    <p className="md:text-l text-balance text-center text-[15px] leading-[25px] text-lavender md:text-lg">
+                                    <p className="text-balance text-center text-[15px] leading-[25px] text-lavender md:text-left md:text-lg">
                                         {c.description}
                                     </p>
-                                    <div className="border-color borderDark mt-[54px] grid w-full grid-cols-1 gap-[32px] border-t pt-[28px] text-center md:grid-cols-2 md:gap-0 md:text-left">
+                                    <div className="border-color borderDark mt-[54px] grid w-full grid-cols-1 gap-[32px] border-t pt-[28px] text-center md:grid-cols-2 md:gap-0 lg:text-left">
                                         <div>
                                             <p className="subheadingTwo text-[14px] text-lavender md:text-base">
                                                 Avg. Distance
