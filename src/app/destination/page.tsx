@@ -49,11 +49,11 @@ export default function DestinationPage() {
                 }}
                 className="md:hidden"
             />
-            <div className="flex max-w-full flex-col px-[24px] pt-24 md:mx-auto md:max-w-screen-lg md:px-24">
-                <div className="relative z-20 mt-[75px] flex items-center justify-start">
-                    <h5 className="text-white">
-                        <span className="font-bold opacity-25">01</span> Pick
-                        Your Destination
+            <div className="flex max-w-full flex-col px-[24px] pt-[88px] md:mx-auto md:max-w-screen-lg md:px-12 md:pt-32 lg:px-24 lg:pt-[212px]">
+                <div className="relative z-20 flex items-center justify-center md:justify-start">
+                    <h5 className="text-[16px] text-white md:text-[20px] lg:text-[28px]">
+                        <span className="pr-2 font-bold opacity-25">01</span>{' '}
+                        Pick Your Destination
                     </h5>
                 </div>
             </div>
@@ -65,9 +65,9 @@ export default function DestinationPage() {
                                 <motion.div
                                     key={c.name}
                                     id={c.name}
-                                    initial={{ y: 10, opacity: 0 }}
-                                    animate={{ y: 0, opacity: 1 }}
-                                    exit={{ y: -10, opacity: 0 }}
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    exit={{ opacity: 0 }}
                                     transition={{
                                         ease: 'easeOut',
                                         duration: 0.6,
@@ -111,9 +111,9 @@ export default function DestinationPage() {
                             tab === i && (
                                 <motion.div
                                     key={c.name}
-                                    initial={{ y: 10, opacity: 0 }}
+                                    initial={{ y: 5, opacity: 0 }}
                                     animate={{ y: 0, opacity: 1 }}
-                                    exit={{ y: -10, opacity: 0 }}
+                                    exit={{ y: -5, opacity: 0 }}
                                     transition={{
                                         ease: 'easeOut',
                                         duration: 0.6,

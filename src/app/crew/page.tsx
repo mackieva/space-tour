@@ -5,7 +5,6 @@ import bgDesktop from '/public/assets/crew/background-crew-desktop.jpg';
 import bgTablet from '/public/assets/crew/background-crew-tablet.jpg';
 import bgMobile from '/public/assets/crew/background-crew-mobile.jpg';
 import { delay, motion } from 'framer-motion';
-import { stagger } from 'framer-motion';
 import { data } from '@/util/data';
 import { useState } from 'react';
 
@@ -22,8 +21,8 @@ export default function CrewPage() {
         },
     };
     const item = {
-        hidden: { opacity: 0 },
-        show: { opacity: 1 },
+        hidden: { scale: 0, opacity: 0 },
+        show: { scale: 1, opacity: 1 },
     };
     return (
         <main className="absolute left-0 top-0 h-screen w-full">
@@ -77,9 +76,9 @@ export default function CrewPage() {
                                 tab === i && (
                                     <motion.div
                                         key={c.name}
-                                        initial={{ x: 10, opacity: 0 }}
-                                        animate={{ x: 0, opacity: 1 }}
-                                        exit={{ x: -10, opacity: 0 }}
+                                        initial={{ y: 5, opacity: 0 }}
+                                        animate={{ y: 0, opacity: 1 }}
+                                        exit={{ y: -5, opacity: 0 }}
                                         transition={{
                                             ease: 'easeOut',
                                             duration: 0.6,
@@ -123,9 +122,9 @@ export default function CrewPage() {
                                 tab === i && (
                                     <motion.div
                                         key={c.name}
-                                        initial={{ y: 10, opacity: 0 }}
-                                        animate={{ y: 0, opacity: 1 }}
-                                        exit={{ y: -10, opacity: 0 }}
+                                        initial={{ opacity: 0 }}
+                                        animate={{ opacity: 1 }}
+                                        exit={{ opacity: 0 }}
                                         transition={{
                                             ease: 'easeInOut',
                                             duration: 0.6,

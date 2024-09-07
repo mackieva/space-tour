@@ -48,11 +48,11 @@ export default function TechnologyPage() {
                 }}
                 className="md:hidden"
             />
-            <div className="mx-auto flex max-w-screen-lg flex-col px-12 lg:px-24 lg:pt-24">
-                <div className="relative z-20 mb-[60px] mt-[75px] flex items-center justify-start">
-                    <h5 className="text-xl text-white lg:text-lg">
-                        <span className="font-bold opacity-25">03</span> Space
-                        Launch 101
+            <div className="flex max-w-full flex-col px-[24px] pt-[88px] md:mx-auto md:max-w-screen-lg md:px-12 md:pt-32 lg:px-24 lg:pt-[212px]">
+                <div className="relative z-20 flex items-center justify-center md:justify-start">
+                    <h5 className="text-[16px] text-white md:text-[20px] lg:text-[28px]">
+                        <span className="pr-2 font-bold opacity-25">03</span>{' '}
+                        Space Launch 101
                     </h5>
                 </div>
             </div>
@@ -80,9 +80,9 @@ export default function TechnologyPage() {
                                 <motion.div
                                     key={i}
                                     layout={true}
-                                    initial={{ x: 10, opacity: 0 }}
-                                    animate={{ x: 0, opacity: 1 }}
-                                    exit={{ x: -10, opacity: 0 }}
+                                    initial={{ y: 5, opacity: 0 }}
+                                    animate={{ y: 0, opacity: 1 }}
+                                    exit={{ y: -5, opacity: 0 }}
                                     transition={{
                                         ease: 'easeOut',
                                         duration: 0.6,
@@ -108,9 +108,9 @@ export default function TechnologyPage() {
                             tab === i && (
                                 <motion.div
                                     key={i}
-                                    initial={{ x: 20, opacity: 0 }}
-                                    animate={{ x: 0, opacity: 1 }}
-                                    exit={{ x: -20, opacity: 0 }}
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    exit={{ opacity: 0 }}
                                     transition={{
                                         ease: 'easeOut',
                                         duration: 0.6,
