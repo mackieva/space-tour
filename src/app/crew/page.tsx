@@ -63,10 +63,10 @@ export default function CrewPage() {
                 className="md:hidden"
             />
             <div className="mx-auto flex h-full max-w-screen-lg flex-col px-12 pt-12 lg:px-24 lg:pt-24">
-                <div className="relative z-20 mt-[75px] flex items-center justify-start">
-                    <h5 className="text-white">
-                        <span className="font-bold opacity-25">02</span> Meet
-                        Your Crew
+                <div className="md: relative z-20 mt-[80px] flex items-center justify-start lg:mt-[120px]">
+                    <h5 className="text-[16px] text-white md:text-[20px] lg:text-[28px]">
+                        <span className="pr-2 font-bold opacity-25">02</span>{' '}
+                        Meet Your Crew
                     </h5>
                 </div>
                 <div className="relative z-20 flex flex-1 flex-col items-center justify-center lg:-mt-8 lg:grid lg:grid-cols-2">
