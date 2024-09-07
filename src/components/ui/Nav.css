@@ -6,6 +6,16 @@
     width: 100%;
     background: rgba(255, 255, 255, 0.4);
 }
+@media (max-width: 768px) {
+    .animatedBorder {
+        position: relative;
+        bottom: 100%;
+        left: 99%;
+        height: 100%;
+        width: 3px;
+        background: rgba(255, 255, 255, 0.4);
+    }
+}
 
 .activeBorder {
     background: #fff;
@@ -14,4 +24,14 @@
     left: 0;
     height: 3px;
     width: 100%;
+}
+@media (max-width: 768px) {
+    .activeBorder {
+        background: #fff;
+        position: relative;
+        bottom: 100%;
+        left: 99%;
+        height: 100%;
+        width: 3px;
+    }
 }

@@ -62,7 +62,7 @@ export default function TechnologyPage() {
                         <motion.button
                             key={i}
                             onClick={() => setTab(i)}
-                            className={`h-[40px] w-[40px] rounded-[50%] border border-slate-400 font-serif text-[24px] leading-none transition-all hover:border-white hover:bg-white hover:text-blue md:h-[50px] md:w-[50px] lg:h-[80px] lg:w-[80px] lg:text-[32px] ${
+                            className={`h-[40px] w-[40px] rounded-[50%] border border-[#979797] font-serif text-[24px] leading-none transition-all hover:border-white md:h-[50px] md:w-[50px] lg:h-[80px] lg:w-[80px] lg:text-[32px] ${
                                 tab === i
                                     ? 'border-white bg-white text-blue'
                                     : ''

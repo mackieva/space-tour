@@ -3,6 +3,7 @@ import Link from 'next/link';
 import bgDesktop from '/public/assets/home/background-home-desktop.jpg';
 import bgTablet from '/public/assets/home/background-home-tablet.jpg';
 import bgMobile from '/public/assets/home/background-home-mobile.jpg';
+import { motion } from 'framer-motion';
 
 export default function Home() {
     return (
@@ -58,9 +59,9 @@ export default function Home() {
                         we’ll give you a truly out of this world experience!
                     </p>
                 </div>
-                <div className="flex flex-col items-center justify-center md:mb-[90px] md:mt-auto lg:mb-0 lg:items-end lg:justify-end">
+                <div className="relative flex flex-col items-center justify-center md:mb-[90px] md:mt-auto lg:mb-0 lg:items-end lg:justify-end">
                     <Link
-                        className="mb-[48px] flex h-[150px] w-[150px] items-center justify-center rounded-full bg-white font-serif uppercase tracking-[2px] text-black md:mb-0 md:h-[242px] md:w-[242px] md:text-[32px] lg:px-[65px] lg:py-[110px]"
+                        className="mb-[48px] flex h-[150px] w-[150px] items-center justify-center rounded-full bg-white font-serif uppercase tracking-[2px] text-black transition-all before:absolute before:z-0 before:bg-[rgba(255,255,255,0.5)] md:mb-0 md:h-[242px] md:w-[242px] md:text-[32px] lg:px-[65px] lg:py-[110px]"
                         href="/destination"
                     >
                         Explore

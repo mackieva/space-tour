@@ -108,8 +108,10 @@ export default function CrewPage() {
                                     key={i}
                                     variants={item}
                                     onClick={() => setTab(i)}
-                                    className={`h-[10px] w-[10px] rounded-full bg-slate-500 transition hover:bg-white lg:h-4 lg:w-4 ${
-                                        tab === i ? 'bg-white' : ''
+                                    className={`h-[10px] w-[10px] rounded-full transition-all hover:bg-[rgba(255,255,255,.5)] lg:h-4 lg:w-4 ${
+                                        tab === i
+                                            ? 'bg-white'
+                                            : 'bg-[rgba(255,255,255,0.17)]'
                                     }`}
                                     animate={{ opacity: 1 }}
                                 ></motion.button>

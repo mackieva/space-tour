@@ -22,18 +22,18 @@ export default function Nav() {
                 />
             </div>
             <nav
-                className={`fixed right-0 top-0 flex h-screen w-3/4 flex-col items-start justify-start gap-[32px] bg-white/[0.04] p-8 pb-0 backdrop-blur-md transition-all duration-300 ${
+                className={`fixed right-0 top-0 flex h-screen w-3/4 flex-col items-start justify-start gap-[32px] bg-white/[0.04] p-8 pb-0 pr-0 backdrop-blur-md transition-all duration-300 md:pr-0 ${
                     navOpen ? 'translate-x-[0]' : 'translate-x-[100%]'
                 } md:relative md:h-auto md:w-full md:translate-x-0 md:flex-row md:justify-center lg:gap-[52px]`}
                 onMouseLeave={() => setHoveredLink('')}
             >
                 <XMarkIcon
-                    className="size-6 self-end text-lavender hover:cursor-pointer md:hidden"
+                    className="mr-8 size-6 self-end text-lavender hover:cursor-pointer md:hidden"
                     onClick={() => setNavOpen(false)}
                 />
                 {navList.map((link, i) => (
                     <Link
-                        className="relative font-sansCon text-base uppercase tracking-[2.7px] text-white md:pb-10 md:text-sm lg:text-base"
+                        className="relative w-full font-sansCon text-base uppercase tracking-[2.7px] text-white md:w-auto md:pb-10 md:text-sm lg:text-base"
                         href={link.path}
                         key={i}
                         onMouseEnter={() => setHoveredLink(link.label)}
@@ -47,7 +47,7 @@ export default function Nav() {
                             <motion.div
                                 layout={true}
                                 layoutId="hovered-backdrop"
-                                className={`animatedBorder`}
+                                className="animatedBorder"
                             />
                         )}
                         {curPath === link.path && (
