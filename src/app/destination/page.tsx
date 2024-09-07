@@ -84,7 +84,7 @@ export default function DestinationPage() {
                             ),
                     )}
                 </div>
-                <div className="flex flex-col items-center justify-center pb-[20px] pt-[26px] md:p-0 md:text-center lg:items-start lg:text-left">
+                <div className="flex flex-col items-center justify-center pb-[20px] pt-[26px] md:p-0 md:text-center lg:items-start lg:justify-start lg:text-left">
                     <div className="flex items-center justify-center gap-5 md:justify-start">
                         {content.map((c, i) => (
                             <button

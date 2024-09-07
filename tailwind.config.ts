@@ -15,7 +15,7 @@ const config: Config = {
                 headerMobile: 'repeat(2, 1fr)',
                 homeGrid: '40% 1fr',
                 destinationGrid: '1fr 40%',
-                techGrid: '1fr 35% 40%',
+                techGrid: 'auto 35% 40%',
             },
             screens: {
                 lg: '1440px',
