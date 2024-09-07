@@ -3,56 +3,47 @@
 @tailwind utilities;
 
 body {
-	@apply font-sans text-white;
+    @apply font-sans text-white;
 }
 
 p {
-	@apply font-sans leading-9 text-lg;
+    @apply font-sans text-lg leading-9;
 }
 
 h1 {
-	@apply font-serif text-white text-[150px] uppercase leading-normal;
+    @apply font-serif text-[150px] uppercase leading-normal text-white;
 }
 
 h2 {
-	@apply font-serif text-white text-[100px] uppercase leading-normal;
+    @apply font-serif text-[100px] uppercase leading-normal text-white;
 }
 
 h3 {
-	@apply font-serif text-white text-[56px] uppercase leading-normal;
+    @apply font-serif text-[56px] uppercase leading-normal text-white;
 }
 
 h4 {
-	@apply font-serif text-white text-[32px] uppercase leading-normal;
+    @apply font-serif text-[32px] uppercase leading-normal text-white;
 }
 
 h5 {
-	@apply font-sansCon text-lavender tracking-[4.75px] uppercase leading-normal;
+    @apply font-sansCon uppercase leading-normal tracking-[4.75px] text-lavender;
 }
 
 .subheadingOne {
-	@apply font-serif text-white text-[28px] uppercase leading-normal;
+    @apply font-serif text-[28px] uppercase leading-normal text-white;
 }
 
 .subheadingTwo {
-	@apply font-sansCon text-[16px] tracking-[2.75px] uppercase leading-normal;
+    @apply font-sansCon text-[16px] uppercase leading-normal tracking-[2.75px];
 }
 
 /* HEADER */
 
 .logoBorder {
-	@apply bg-slate-400 w-0 h-[1px] mr-[-100px] relative z-[50];
-}
-
-.animatedBorder {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	height: 3px;
-	width: 100%;
-	background: #fff;
+    @apply relative z-[50] mr-[-100px] h-[1px] w-0 bg-slate-400;
 }
 
 .borderDark {
-	border-color: #383b4b;
+    border-color: #383b4b;
 }
