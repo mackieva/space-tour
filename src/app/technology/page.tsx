@@ -102,7 +102,7 @@ export default function TechnologyPage() {
                             ),
                     )}
                 </div>
-                <div className="order-1 overflow-hidden lg:order-3 lg:flex lg:items-center lg:justify-end">
+                <div className="order-1 overflow-hidden md:mt-[60px] lg:order-3 lg:mt-0 lg:flex lg:items-center lg:justify-end">
                     {content.map(
                         (c, i) =>
                             tab === i && (
