@@ -62,15 +62,15 @@ export default function CrewPage() {
                 }}
                 className="md:hidden"
             />
-            <div className="mx-auto flex h-full max-w-screen-lg flex-col px-12 pt-12 lg:px-24 lg:pt-24">
-                <div className="md: relative z-20 mt-[80px] flex items-center justify-start lg:mt-[120px]">
+            <div className="mx-auto flex h-full max-w-screen-lg flex-col px-[24px] pt-[88px] md:px-12 md:pt-12 lg:px-24 lg:pt-24">
+                <div className="relative z-20 mt-0 flex items-center justify-center md:mt-[80px] md:justify-start lg:mt-[120px]">
                     <h5 className="text-[16px] text-white md:text-[20px] lg:text-[28px]">
                         <span className="pr-2 font-bold opacity-25">02</span>{' '}
                         Meet Your Crew
                     </h5>
                 </div>
-                <div className="relative z-20 flex flex-1 flex-col items-center justify-center lg:-mt-8 lg:grid lg:grid-cols-2">
-                    <div className="max-w-2/3 flex max-w-[595px] flex-col items-center justify-center gap-10 text-center lg:max-w-full lg:items-start lg:gap-32 lg:text-left">
+                <div className="relative z-20 flex flex-1 flex-col items-center justify-start md:justify-center lg:-mt-8 lg:grid lg:grid-cols-2">
+                    <div className="max-w-2/3 order-2 flex max-w-[595px] flex-col items-center justify-center text-center md:order-1 md:gap-10 lg:max-w-full lg:items-start lg:gap-32 lg:text-left">
                         {content.map(
                             (c, i) =>
                                 tab === i && (
@@ -83,12 +83,12 @@ export default function CrewPage() {
                                             ease: 'easeOut',
                                             duration: 0.6,
                                         }}
-                                        className="mt-[60px] lg:m-0"
+                                        className="order-2 md:order-1 md:mt-[60px] lg:m-0"
                                     >
-                                        <h4 className="text-[rgba(255,255,255,0.5)] md:text-2xl lg:text-white">
+                                        <h4 className="text-base text-[rgba(255,255,255,0.5)] md:text-2xl lg:text-white">
                                             {c.role}
                                         </h4>
-                                        <h3 className="md:text-[40px] lg:text-[56px] lg:text-white">
+                                        <h3 className="text-[24px] md:text-[40px] lg:text-[56px] lg:text-white">
                                             {c.name}
                                         </h3>
                                         <p className="text-balance text-[16px] leading-8 text-lavender lg:text-left lg:text-[18px] lg:leading-9">
@@ -101,7 +101,7 @@ export default function CrewPage() {
                             variants={container}
                             initial="hidden"
                             animate="show"
-                            className="flex gap-6"
+                            className="order-1 mb-8 mt-8 flex gap-6 md:order-2 md:mb-0 md:mt-0"
                         >
                             {content.map((c, i) => (
                                 <motion.button
@@ -116,7 +116,7 @@ export default function CrewPage() {
                             ))}
                         </motion.div>
                     </div>
-                    <div className="relative flex h-full w-full items-end justify-end overflow-hidden">
+                    <div className="relative order-1 flex h-full max-h-[45%] w-full items-end justify-end overflow-hidden border-b-[1px] border-b-[#383B4B] md:order-2 md:h-full md:max-h-full md:border-0">
                         {content.map(
                             (c, i) =>
                                 tab === i && (
