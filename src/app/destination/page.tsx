@@ -84,15 +84,15 @@ export default function DestinationPage() {
                             ),
                     )}
                 </div>
-                <div className="flex flex-col justify-center md:items-center md:text-center lg:items-start lg:text-left">
-                    <div className="flex gap-5">
+                <div className="flex flex-col items-center justify-center pb-[20px] pt-[26px] md:p-0 md:text-center lg:items-start lg:text-left">
+                    <div className="flex items-center justify-center gap-5 md:justify-start">
                         {content.map((c, i) => (
                             <button
                                 key={i}
                                 onClick={() => setTab(i)}
                                 onMouseEnter={() => setHoveredLink(c.name)}
-                                className={`subheadingTwo relative pb-1 uppercase text-lavender ${
-                                    tab === i && 'selected'
+                                className={`subheadingTwo relative pb-2 text-[14px] uppercase text-lavender md:text-base ${
+                                    tab === i && 'text-white'
                                 }`}
                             >
                                 {c.name}
@@ -100,7 +100,7 @@ export default function DestinationPage() {
                                     <motion.div
                                         layout={true}
                                         layoutId="tab-hovered-backdrop"
-                                        className="animatedBorder"
+                                        className="animatedBorderDestination"
                                     />
                                 )}
                             </button>
@@ -119,13 +119,15 @@ export default function DestinationPage() {
                                         duration: 0.6,
                                     }}
                                 >
-                                    <h2>{c.name}</h2>
-                                    <p className="text-balance text-lg text-lavender">
+                                    <h2 className="text-center text-[56px] md:text-left">
+                                        {c.name}
+                                    </h2>
+                                    <p className="md:text-l text-balance text-center text-[15px] leading-[25px] text-lavender md:text-lg">
                                         {c.description}
                                     </p>
-                                    <div className="border-color borderDark mt-[54px] grid w-full grid-cols-1 border-t pt-[28px] md:grid-cols-2">
+                                    <div className="border-color borderDark mt-[54px] grid w-full grid-cols-1 gap-[32px] border-t pt-[28px] text-center md:grid-cols-2 md:gap-0 md:text-left">
                                         <div>
-                                            <p className="subheadingTwo text-lavender">
+                                            <p className="subheadingTwo text-[14px] text-lavender md:text-base">
                                                 Avg. Distance
                                             </p>
                                             <p className="subheadingOne">

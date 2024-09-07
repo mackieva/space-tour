@@ -35,7 +35,7 @@ h5 {
 }
 
 .subheadingTwo {
-    @apply font-sansCon text-[16px] uppercase leading-normal tracking-[2.75px];
+    @apply font-sansCon uppercase leading-normal tracking-[2.75px];
 }
 
 /* HEADER */
@@ -46,4 +46,14 @@ h5 {
 
 .borderDark {
     border-color: #383b4b;
+}
+
+.animatedBorderDestination {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-top: 5px;
+    height: 3px;
+    width: 100%;
+    background: #fff;
 }
