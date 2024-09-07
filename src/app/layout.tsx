@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Bellefair, Barlow, Barlow_Condensed } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/ui/Header';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const bellefair = Bellefair({
     subsets: ['latin'],
@@ -39,6 +40,7 @@ export default function RootLayout({
             >
                 <Header />
                 {children}
+                <SpeedInsights />
             </body>
         </html>
     );
