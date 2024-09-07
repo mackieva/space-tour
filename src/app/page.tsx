@@ -43,8 +43,8 @@ export default function Home() {
                 }}
                 className="md:hidden"
             />
-            <div className="mx-w-screen-lg z-2 relative mx-auto flex h-full flex-col items-center justify-center px-[24px] pt-[112px] md:px-[160px] md:pt-[200px] lg:grid lg:grid-cols-2 lg:px-[165px] lg:pb-[130px] lg:pt-0">
-                <div className="flex max-w-[450px] flex-col items-center justify-start md:justify-center lg:items-start lg:justify-end">
+            <div className="mx-w-screen-lg z-2 relative mx-auto flex h-full flex-col items-center justify-between px-[24px] pt-[112px] md:justify-center md:px-[160px] md:pt-[200px] lg:grid lg:grid-cols-2 lg:px-[165px] lg:pb-[130px] lg:pt-0">
+                <div className="flex max-w-[450px] flex-col items-center justify-start md:justify-start lg:h-full lg:items-start lg:justify-end">
                     <h5 className="subheadingTwo md:text-xl lg:text-[28px]">
                         So, you want to travel to
                     </h5>
@@ -60,7 +60,7 @@ export default function Home() {
                 </div>
                 <div className="flex flex-col items-center justify-center md:mb-[90px] md:mt-auto lg:mb-0 lg:items-end lg:justify-end">
                     <Link
-                        className="flex items-center justify-center rounded-full bg-white py-[85px] font-serif text-[32px] uppercase tracking-[2px] text-black md:h-[242px] md:w-[242px] md:px-0 lg:px-[65px] lg:py-[110px]"
+                        className="mb-[48px] flex h-[150px] w-[150px] items-center justify-center rounded-full bg-white font-serif uppercase tracking-[2px] text-black md:mb-0 md:h-[242px] md:w-[242px] md:text-[32px] lg:px-[65px] lg:py-[110px]"
                         href="/destination"
                     >
                         Explore
